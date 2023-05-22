@@ -1,6 +1,8 @@
 package hello.login.web.filter;
 import hello.login.web.SessionConst;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.PatternMatchUtils;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Slf4j
+@Component
 public class LoginCheckFilter implements Filter {
 
     private static final String[] whitelist = {"/","members/add","/login","/logout","/css/*"};
